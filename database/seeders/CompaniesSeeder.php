@@ -1,0 +1,202 @@
+<?php
+
+namespace Database\Seeders;
+
+use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
+
+class CompaniesSeeder extends Seeder
+{
+    public function run(): void
+    {
+        // Get municipality IDs
+        $municipalities = DB::table('municipalities')->pluck('id', 'code');
+
+        $companies = [
+            // City of Tshwane companies
+            ['name' => 'Abacus Lending - Cellphones', 'municipality_id' => $municipalities['COT']],
+            ['name' => 'Alphasure Underwriting Managers', 'municipality_id' => $municipalities['COT']],
+            ['name' => 'BA DIRA MMOGO SOCIAL CLUB', 'municipality_id' => $municipalities['COT']],
+            ['name' => 'Bayport Life Plus - Traffic Insurance', 'municipality_id' => $municipalities['COT']],
+            ['name' => 'Capital Legacy Solutions Pty Ltd', 'municipality_id' => $municipalities['COT']],
+            ['name' => 'Cede Capital Pty Ltd - Insurance', 'municipality_id' => $municipalities['COT']],
+            ['name' => 'Cede Capital Pty Ltd - Loan', 'municipality_id' => $municipalities['COT']],
+            ['name' => 'Clientele Life Assurance Company Ltd', 'municipality_id' => $municipalities['COT']],
+            ['name' => 'Datacapital Technologies & ISP', 'municipality_id' => $municipalities['COT']],
+            ['name' => 'Emerald Life CC', 'municipality_id' => $municipalities['COT']],
+            ['name' => 'Empower Fin Salary Advance Product', 'municipality_id' => $municipalities['COT']],
+            ['name' => 'FFS Finance - MN Sumbulukwa', 'municipality_id' => $municipalities['COT']],
+            ['name' => 'Fundi Capital Pty Ltd', 'municipality_id' => $municipalities['COT']],
+            ['name' => 'Government Empl Personal Finance Pty Ltd', 'municipality_id' => $municipalities['COT']],
+            ['name' => 'Happy Social Club', 'municipality_id' => $municipalities['COT']],
+            ['name' => 'Laerskool Jeugkrag', 'municipality_id' => $municipalities['COT']],
+            ['name' => 'Learskool Uniefees - 1052', 'municipality_id' => $municipalities['COT']],
+            ['name' => 'Learskool Uniefees - 2081', 'municipality_id' => $municipalities['COT']],
+            ['name' => 'Lion Life - Lion of Africa', 'municipality_id' => $municipalities['COT']],
+            ['name' => 'M&H Bridging Finance Pty Ltd', 'municipality_id' => $municipalities['COT']],
+            ['name' => 'Maintenance - F Moropa', 'municipality_id' => $municipalities['COT']],
+            ['name' => 'Maintenance - Kadiaka LK', 'municipality_id' => $municipalities['COT']],
+            ['name' => 'Maintenance - KU Mokobane', 'municipality_id' => $municipalities['COT']],
+            ['name' => 'Maintenance - M Mthombeni', 'municipality_id' => $municipalities['COT']],
+            ['name' => 'Maintenance - Mametja TN', 'municipality_id' => $municipalities['COT']],
+            ['name' => 'Maintenance - Mathiba T', 'municipality_id' => $municipalities['COT']],
+            ['name' => 'Maintenance - Morukhu Makolobe J', 'municipality_id' => $municipalities['COT']],
+            ['name' => 'Maintenance - MP Molekoa', 'municipality_id' => $municipalities['COT']],
+            ['name' => 'Maintenance - MS Maila', 'municipality_id' => $municipalities['COT']],
+            ['name' => 'Maintenance - P Bhotya', 'municipality_id' => $municipalities['COT']],
+            ['name' => 'Maintenance - TS Sibeko', 'municipality_id' => $municipalities['COT']],
+            ['name' => 'MTN - VBD Maphosa', 'municipality_id' => $municipalities['COT']],
+            ['name' => 'Rand Mutual Assurance Co Ltd', 'municipality_id' => $municipalities['COT']],
+            ['name' => 'Region 6 Social Club', 'municipality_id' => $municipalities['COT']],
+            ['name' => 'Retail Financial Services', 'municipality_id' => $municipalities['COT']],
+            ['name' => 'SAMWU Data Wallet Pty Ltd', 'municipality_id' => $municipalities['COT']],
+
+            // Ekurhuleni companies
+            ['name' => '21St Century Funeral Brokers Pty Ltd', 'municipality_id' => $municipalities['EKU']],
+            ['name' => '32 Sign Club', 'municipality_id' => $municipalities['EKU']],
+            ['name' => 'Abacus Lending - Wellness Loans', 'municipality_id' => $municipalities['EKU']],
+            ['name' => 'Abacus Lending - Wellness Policies', 'municipality_id' => $municipalities['EKU']],
+            ['name' => 'ABSA VF - Masweneng AM', 'municipality_id' => $municipalities['EKU']],
+            ['name' => 'ABSA VF - PJ Radebe', 'municipality_id' => $municipalities['EKU']],
+            ['name' => 'ABSA VF - S Moeketsi - Toyota', 'municipality_id' => $municipalities['EKU']],
+            ['name' => 'Aganang Basebetsi Club', 'municipality_id' => $municipalities['EKU']],
+            ['name' => 'Allowance - Mojapelo SE', 'municipality_id' => $municipalities['EKU']],
+            ['name' => 'Amazing Shift Club', 'municipality_id' => $municipalities['EKU']],
+            ['name' => 'ASAP Training and Consulting', 'municipality_id' => $municipalities['EKU']],
+            ['name' => 'B3 Insurance Brokers CC', 'municipality_id' => $municipalities['EKU']],
+            ['name' => 'Basebenzi Bahlangene Burial Soc', 'municipality_id' => $municipalities['EKU']],
+            ['name' => 'Bathobatsho Club', 'municipality_id' => $municipalities['EKU']],
+            ['name' => 'Boksburg High School', 'municipality_id' => $municipalities['EKU']],
+            ['name' => 'Boston City Campus Pty Ltd', 'municipality_id' => $municipalities['EKU']],
+            ['name' => 'Brakpan Energy MENS Club', 'municipality_id' => $municipalities['EKU']],
+            ['name' => 'Capital Legacy Solutions Pty Ltd', 'municipality_id' => $municipalities['EKU']],
+            ['name' => 'Capitec Loan - PH Mpateng', 'municipality_id' => $municipalities['EKU']],
+            ['name' => 'Credit Gateway - Cellphone', 'municipality_id' => $municipalities['EKU']],
+            ['name' => 'Da Champ Security', 'municipality_id' => $municipalities['EKU']],
+            ['name' => 'Datacapital Technologies & ISP', 'municipality_id' => $municipalities['EKU']],
+            ['name' => 'Delta Kempton Group Stokvel', 'municipality_id' => $municipalities['EKU']],
+            ['name' => 'Development Bank of SA', 'municipality_id' => $municipalities['EKU']],
+            ['name' => 'Duraform (Pty) Ltd - Training', 'municipality_id' => $municipalities['EKU']],
+            ['name' => 'Ebony Burial Society', 'municipality_id' => $municipalities['EKU']],
+            ['name' => 'Emerald Life CC', 'municipality_id' => $municipalities['EKU']],
+            ['name' => 'Empower Fin - Home loans', 'municipality_id' => $municipalities['EKU']],
+            ['name' => 'FNB - Nkambule M', 'municipality_id' => $municipalities['EKU']],
+            ['name' => 'FNB Card - Mtsweni PS', 'municipality_id' => $municipalities['EKU']],
+            ['name' => 'Gallagher Combined School', 'municipality_id' => $municipalities['EKU']],
+            ['name' => 'Gov Emp Personal Finance', 'municipality_id' => $municipalities['EKU']],
+            ['name' => 'Hi-Tech Training & Consulting', 'municipality_id' => $municipalities['EKU']],
+            ['name' => 'Imizi Housing', 'municipality_id' => $municipalities['EKU']],
+            ['name' => 'Joko Investments - J Breytenbach', 'municipality_id' => $municipalities['EKU']],
+            ['name' => 'Legae Investment - C Ndlovu', 'municipality_id' => $municipalities['EKU']],
+            ['name' => 'Legal and Tax', 'municipality_id' => $municipalities['EKU']],
+            ['name' => 'Liberty Corporate', 'municipality_id' => $municipalities['EKU']],
+            ['name' => 'Mabusa Social Club', 'municipality_id' => $municipalities['EKU']],
+            ['name' => 'Matsose Funeral Undertakers', 'municipality_id' => $municipalities['EKU']],
+            ['name' => 'Mohlala Financial Services', 'municipality_id' => $municipalities['EKU']],
+            ['name' => 'Motlhago Investments', 'municipality_id' => $municipalities['EKU']],
+            ['name' => 'Old Mutual Group', 'municipality_id' => $municipalities['EKU']],
+            ['name' => 'Oupa Nkhwedi Tladi', 'municipality_id' => $municipalities['EKU']],
+            ['name' => 'Phomolong Club', 'municipality_id' => $municipalities['EKU']],
+            ['name' => 'Prokato Trading Enterprises', 'municipality_id' => $municipalities['EKU']],
+            ['name' => 'Rand Mutual Assurance Co Ltd', 'municipality_id' => $municipalities['EKU']],
+            ['name' => 'SANAC', 'municipality_id' => $municipalities['EKU']],
+            ['name' => 'Service Staff Provident Fund', 'municipality_id' => $municipalities['EKU']],
+            ['name' => 'Southern Ambition - B Mahlangu', 'municipality_id' => $municipalities['EKU']],
+            ['name' => 'Soweto Country Club', 'municipality_id' => $municipalities['EKU']],
+            ['name' => 'Stangen Limited', 'municipality_id' => $municipalities['EKU']],
+            ['name' => 'TS Mphake Social Club', 'municipality_id' => $municipalities['EKU']],
+            ['name' => 'Tswaranang Social Club', 'municipality_id' => $municipalities['EKU']],
+            ['name' => 'uMalusi Investment Group', 'municipality_id' => $municipalities['EKU']],
+            ['name' => 'We Buy Cars', 'municipality_id' => $municipalities['EKU']],
+            ['name' => 'Workmens Compensation Fund', 'municipality_id' => $municipalities['EKU']],
+
+            // Mogale City companies
+            ['name' => 'Absa Vehicle & Asset Finance', 'municipality_id' => $municipalities['MOG']],
+            ['name' => 'AJMS Group', 'municipality_id' => $municipalities['MOG']],
+            ['name' => 'Allenridge Secondary School', 'municipality_id' => $municipalities['MOG']],
+            ['name' => 'AOG Church', 'municipality_id' => $municipalities['MOG']],
+            ['name' => 'Bontleng Ba Mmoho Social Club', 'municipality_id' => $municipalities['MOG']],
+            ['name' => 'Buffalo Insurance Brokers', 'municipality_id' => $municipalities['MOG']],
+            ['name' => 'Capital Legacy Solutions Pty Ltd', 'municipality_id' => $municipalities['MOG']],
+            ['name' => 'Clientele Life Assurance Company Ltd', 'municipality_id' => $municipalities['MOG']],
+            ['name' => 'Credit Guarantee Insurance Co', 'municipality_id' => $municipalities['MOG']],
+            ['name' => 'Emerald Life CC', 'municipality_id' => $municipalities['MOG']],
+            ['name' => 'First National Bank - Home loan', 'municipality_id' => $municipalities['MOG']],
+            ['name' => 'Fundi Capital Pty Ltd', 'municipality_id' => $municipalities['MOG']],
+            ['name' => 'Indibano Financial Services', 'municipality_id' => $municipalities['MOG']],
+            ['name' => 'Kapana Social Club', 'municipality_id' => $municipalities['MOG']],
+            ['name' => 'Liberty Corporate', 'municipality_id' => $municipalities['MOG']],
+            ['name' => 'Life Sense Financial Services', 'municipality_id' => $municipalities['MOG']],
+            ['name' => 'Mohlakeng Social Club', 'municipality_id' => $municipalities['MOG']],
+            ['name' => 'Old Mutual Group', 'municipality_id' => $municipalities['MOG']],
+            ['name' => 'Rand Mutual Assurance Co Ltd', 'municipality_id' => $municipalities['MOG']],
+            ['name' => 'Saambou', 'municipality_id' => $municipalities['MOG']],
+            ['name' => 'Stangen Limited', 'municipality_id' => $municipalities['MOG']],
+            ['name' => 'Transnet', 'municipality_id' => $municipalities['MOG']],
+            ['name' => 'Tsabedze TS', 'municipality_id' => $municipalities['MOG']],
+            ['name' => 'UMALUSI Investment Group', 'municipality_id' => $municipalities['MOG']],
+            ['name' => 'Workmens Compensation Fund', 'municipality_id' => $municipalities['MOG']],
+
+            // Emfuleni companies
+            ['name' => 'ABSA VF - G Marule', 'municipality_id' => $municipalities['EMF']],
+            ['name' => 'ABSA VF - M Moloi', 'municipality_id' => $municipalities['EMF']],
+            ['name' => 'ABSA VF - Mtsweni PS', 'municipality_id' => $municipalities['EMF']],
+            ['name' => 'ABSA VF - Phetla MS', 'municipality_id' => $municipalities['EMF']],
+            ['name' => 'AlphaSure Underwriting Managers', 'municipality_id' => $municipalities['EMF']],
+            ['name' => 'Capital Legacy Solutions Pty Ltd', 'municipality_id' => $municipalities['EMF']],
+
+            // Merafong companies
+            ['name' => 'Capital Legacy Solutions Pty Ltd', 'municipality_id' => $municipalities['MER']],
+            ['name' => 'Emerald Life CC', 'municipality_id' => $municipalities['MER']],
+            ['name' => 'Fundi Capital Pty Ltd', 'municipality_id' => $municipalities['MER']],
+            ['name' => 'Lion Life - Lion of Africa', 'municipality_id' => $municipalities['MER']],
+            ['name' => 'MMK Financial Solutions', 'municipality_id' => $municipalities['MER']],
+            ['name' => 'Old Mutual Group', 'municipality_id' => $municipalities['MER']],
+            ['name' => 'Rand Mutual Assurance Co Ltd', 'municipality_id' => $municipalities['MER']],
+            ['name' => 'Retail Financial Services', 'municipality_id' => $municipalities['MER']],
+
+            // Rand West City companies
+            ['name' => 'Capital Legacy Solutions Pty Ltd', 'municipality_id' => $municipalities['RWC']],
+            ['name' => 'Emerald Life CC', 'municipality_id' => $municipalities['RWC']],
+            ['name' => 'First National Bank', 'municipality_id' => $municipalities['RWC']],
+            ['name' => 'Fundi Capital Pty Ltd', 'municipality_id' => $municipalities['RWC']],
+            ['name' => 'Mohlakeng Social Club', 'municipality_id' => $municipalities['RWC']],
+            ['name' => 'Old Mutual Group', 'municipality_id' => $municipalities['RWC']],
+            ['name' => 'Rand Mutual Assurance Co Ltd', 'municipality_id' => $municipalities['RWC']],
+            ['name' => 'Retail Financial Services', 'municipality_id' => $municipalities['RWC']],
+            ['name' => 'Stangen Limited', 'municipality_id' => $municipalities['RWC']],
+            ['name' => 'Tswaranang Social Club', 'municipality_id' => $municipalities['RWC']],
+            ['name' => 'Workmens Compensation Fund', 'municipality_id' => $municipalities['RWC']],
+
+            // City of Johannesburg companies
+            ['name' => '21St Century Funeral Brokers Pty Ltd', 'municipality_id' => $municipalities['COJ']],
+            ['name' => 'Adcock Ingram Employee Fund', 'municipality_id' => $municipalities['COJ']],
+            ['name' => 'Alexander Forbes Group', 'municipality_id' => $municipalities['COJ']],
+            ['name' => 'Capital Legacy Solutions Pty Ltd', 'municipality_id' => $municipalities['COJ']],
+            ['name' => 'Credit Guarantee Insurance Co', 'municipality_id' => $municipalities['COJ']],
+            ['name' => 'Emerald Life CC', 'municipality_id' => $municipalities['COJ']],
+            ['name' => 'First National Bank - Home loan', 'municipality_id' => $municipalities['COJ']],
+            ['name' => 'Fundi Capital Pty Ltd', 'municipality_id' => $municipalities['COJ']],
+            ['name' => 'Government Employees Fund', 'municipality_id' => $municipalities['COJ']],
+            ['name' => 'Maintenance - L. M Malinga', 'municipality_id' => $municipalities['COJ']],
+            ['name' => 'Metropolitan Group & Life', 'municipality_id' => $municipalities['COJ']],
+            ['name' => 'Old Mutual Group', 'municipality_id' => $municipalities['COJ']],
+            ['name' => 'Rand Mutual Assurance Co Ltd', 'municipality_id' => $municipalities['COJ']],
+            ['name' => 'Scorpion - Legal Protection', 'municipality_id' => $municipalities['COJ']],
+            ['name' => 'Stangen Limited', 'municipality_id' => $municipalities['COJ']],
+        ];
+
+        foreach ($companies as $company) {
+            DB::table('companies')->updateOrInsert(
+                ['name' => $company['name'], 'municipality_id' => $company['municipality_id']],
+                array_merge($company, [
+                    'status' => 'active',
+                    'registration_number' => null,
+                    'contact_email' => null,
+                    'created_at' => now(),
+                    'updated_at' => now()
+                ])
+            );
+        }
+    }
+}
